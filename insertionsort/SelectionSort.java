@@ -1,6 +1,6 @@
 import java.io.*; //We assume that the input will be from a seperate file in this example
 
-public class InsertionSort
+public class SelectionSort
 {
     int[] integerArray; //The code used to sort integers can be applied to any other numerical data type(eg. long, float, double) as well as characters
     String[] stringArray; //Can be used to sort any other type of object that has the compareTo() function properly formatted
@@ -43,10 +43,10 @@ public class InsertionSort
     }
 
 
-    public void stringInsertionSort ()
+    public void stringSelectionSort ()
     {
         int smallest;
-        for (int i = 0 ; i < stringArray.length ; i++)//Loops through the enitire array
+        for (int i = 0 ; i < stringArray.length ; i++)//Loops through the entire array
         {
             int j;
             smallest = stringArray.length - 1;
@@ -74,7 +74,7 @@ public class InsertionSort
     }
 
 
-    public void intInsertionSort ()
+    public void intSelectionSort ()
     {
         int smallest;
         for (int i = 0 ; i < integerArray.length ; i++)
@@ -119,11 +119,11 @@ public class InsertionSort
 
     public static void main (String[] args)
     {
-        InsertionSort is = new InsertionSort ();
+        SelectionSort is = new SelectionSort ();
         is.getStringInput ();
-        is.stringInsertionSort ();
+        is.stringSelectionSort();
         is.getIntegerInput ();
-        is.intInsertionSort ();
+        is.intSelectionSort ();
         System.out.println (is);
     }
 }
